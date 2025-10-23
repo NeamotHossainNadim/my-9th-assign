@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import React, { useEffect, useState } from "react";
 import SkillCard from "../components/SkillCard";
 import Loading from "../components/Loading";
@@ -29,12 +28,11 @@ const Home = () => {
 
   return (
     <div className="container mx-auto px-4 py-10">
-      {/* 🌟 Hero Section */}
       <section
         className="relative text-center bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-24 rounded-3xl shadow-lg overflow-hidden"
         data-aos="fade-up"
       >
-        {/* Background Glow */}
+        
         <div className="absolute inset-0 bg-[url('https://plus.unsplash.com/premium_photo-1720287601300-cf423c3d6760?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZ3JhbW1pbmclMjBwcm9maWxlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600')] opacity-10"></div>
 
         <div className="relative z-10 px-6">
@@ -58,7 +56,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ⚡ Popular Skills Section */}
+      
       <section className="mt-20">
         <div className="text-center mb-10" data-aos="fade-down">
           <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
@@ -78,7 +76,6 @@ const Home = () => {
           ))}
         </div>
 
-        {/* View More Button */}
         <div className="text-center mt-12" data-aos="zoom-in">
           <Link
             to="/explore"
