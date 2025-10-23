@@ -10,7 +10,7 @@ const TopProviders = () => {
   useEffect(() => {
     AOS.init({ duration: 800, easing: "ease-in-out" });
 
-    // Simulated API fetch (replace with real API or Firebase query)
+    
     setTimeout(() => {
       setProviders([
         {
@@ -93,7 +93,6 @@ const TopProviders = () => {
         ))}
       </div>
 
-      {/* CTA Section */}
       <motion.div data-aos="fade-up" className="text-center mt-20">
         <h2 className="text-3xl font-bold text-gray-800 mb-4">
           Want to become a Top Provider?
