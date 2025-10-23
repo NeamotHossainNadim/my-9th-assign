@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast";
 
-// Pages
+
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -19,7 +19,7 @@ import Explore from "./pages/Explore";
 const App = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Toast Notifications */}
+      
       <Toaster position="top-center" reverseOrder={false} />
 
       <Navbar />
@@ -34,7 +34,7 @@ const App = () => {
           <Route path="/signup" element={<Signup />} />
           <Route path="/forget-password" element={<ForgetPassword />} />
 
-          {/* Protected Routes */}
+          
           <Route
             path="/skills/:id"
             element={
