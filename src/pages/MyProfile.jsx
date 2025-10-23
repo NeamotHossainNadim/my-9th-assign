@@ -1,4 +1,3 @@
-// src/pages/MyProfile.jsx
 import React, { useEffect, useState } from "react";
 import { onAuthStateChanged, updateProfile } from "firebase/auth";
 import { auth } from "../firebase.config";
@@ -49,15 +48,15 @@ const MyProfile = () => {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="max-w-3xl mx-auto bg-white shadow-xl rounded-2xl border border-gray-100 overflow-hidden"
       >
-        {/* Header */}
+        
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-8 px-6 text-center">
           <h1 className="text-3xl font-bold">My Profile</h1>
           <p className="text-blue-100 mt-1">Manage your personal details</p>
         </div>
 
-        {/* Content */}
+        
         <div className="p-8 md:p-10 flex flex-col items-center gap-6">
-          {/* Profile Photo */}
+          
           <div className="relative">
             <img
               src={photoURL || "https://via.placeholder.com/120?text=User"}
@@ -72,12 +71,12 @@ const MyProfile = () => {
             </button>
           </div>
 
-          {/* Form */}
+          
           <form
             onSubmit={handleUpdateProfile}
             className="w-full md:w-2/3 space-y-5 mt-6"
           >
-            {/* Full Name */}
+            
             <div>
               <label className="block text-gray-600 font-medium mb-2 flex items-center gap-2">
                 <UserCircle2 className="text-blue-600" size={18} />
@@ -92,7 +91,7 @@ const MyProfile = () => {
               />
             </div>
 
-            {/* Email */}
+            
             <div>
               <label className="block text-gray-600 font-medium mb-2 flex items-center gap-2">
                 <Mail className="text-blue-600" size={18} />
@@ -106,7 +105,7 @@ const MyProfile = () => {
               />
             </div>
 
-            {/* Save Button */}
+            
             <button
               type="submit"
               className="w-full bg-blue-600 hover:bg-blue-700 transition text-white font-semibold py-2.5 rounded-md shadow-md"
