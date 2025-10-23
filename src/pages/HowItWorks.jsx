@@ -62,7 +62,7 @@ const HowItWorks = () => {
         ))}
       </div>
 
-      {/* Call to Action */}
+      
       <motion.div
         data-aos="fade-up"
         className="text-center mt-20"
