@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-// 🖼️ Predefined static images for each skill (all from Unsplash)
+
 const skillImages = {
   "Web Development":
     "https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=800&q=80",
@@ -30,7 +30,7 @@ const skillImages = {
 const SkillCard = ({ skill }) => {
   const { skillId, skillName, providerName, price, rating, category } = skill;
 
-  // ✅ Select image based on skill or category
+  
   const imageUrl =
     skillImages[skillName] ||
     skillImages[category] ||
@@ -45,7 +45,7 @@ const SkillCard = ({ skill }) => {
       transition={{ duration: 0.4, ease: "easeOut" }}
       className="relative overflow-hidden rounded-3xl border border-gray-100 shadow-md hover:shadow-2xl bg-gradient-to-b from-white to-gray-50 transition-all duration-300 group"
     >
-      {/* 🖼️ Image Section */}
+      
       <div className="relative h-48 sm:h-56 overflow-hidden">
         <img
           src={imageUrl}
@@ -54,7 +54,7 @@ const SkillCard = ({ skill }) => {
           loading="lazy"
         />
 
-        {/* Overlay on hover */}
+        
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center">
           <Link
             to={`/skills/${skillId}`}
@@ -64,13 +64,13 @@ const SkillCard = ({ skill }) => {
           </Link>
         </div>
 
-        {/* Category badge */}
+        
         <span className="absolute top-3 left-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg backdrop-blur-sm">
           {category || "Skill"}
         </span>
       </div>
 
-      {/* 🧾 Content Section */}
+      
       <div className="p-6 flex flex-col justify-between h-52">
         <div>
           <h3 className="text-lg font-bold text-gray-800 line-clamp-1 group-hover:text-blue-600 transition-colors">
@@ -82,7 +82,7 @@ const SkillCard = ({ skill }) => {
           </p>
         </div>
 
-        {/* 💰 Price & ⭐ Rating */}
+        
         <div className="flex justify-between items-center mt-4">
           <span className="text-2xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             ${price}
@@ -93,7 +93,7 @@ const SkillCard = ({ skill }) => {
           </div>
         </div>
 
-        {/* 📱 Mobile Button */}
+        
         <Link
           to={`/skills/${skillId}`}
           className="mt-5 block text-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-2.5 rounded-xl shadow hover:shadow-lg hover:scale-[1.02] transition-all duration-300 sm:hidden focus:ring-2 focus:ring-blue-400 focus:outline-none"
@@ -102,7 +102,7 @@ const SkillCard = ({ skill }) => {
         </Link>
       </div>
 
-      {/* ✨ Accent Glow */}
+      
       <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-blue-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
     </motion.div>
   );

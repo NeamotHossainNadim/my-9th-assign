@@ -1,4 +1,3 @@
-// src/pages/Signup.jsx
 import React, { useState } from "react";
 import {
   createUserWithEmailAndPassword,
@@ -38,7 +37,7 @@ const Signup = () => {
     }
   };
 
-  // ✅ Password validation rules
+  
   const validatePassword = (password) => {
     if (password.length < 6)
       return "Password must be at least 6 characters long.";
@@ -67,10 +66,10 @@ const Signup = () => {
 
       await updateProfile(userCredential.user, {
         displayName: name,
-        photoURL: previewUrl || "https://via.placeholder.com/100",
+        photoURL: previewUrl,
       });
 
-      toast.success("Signup successful! 🎉 Welcome to SkillSwap");
+      toast.success("Signup successful! Welcome to SkillSwap");
       navigate("/");
     } catch (error) {
       toast.error(error.message);
@@ -99,7 +98,6 @@ const Signup = () => {
           Create Your Account
         </h2>
 
-        {/* Profile Image Upload */}
         <div className="flex justify-center mb-6">
           <label className="relative cursor-pointer">
             <div className="w-24 h-24 rounded-full border-4 border-blue-100 overflow-hidden shadow-md">
@@ -126,9 +124,8 @@ const Signup = () => {
           </label>
         </div>
 
-        {/* Signup Form */}
+        
         <form onSubmit={handleSignup} className="space-y-4">
-          {/* Name */}
           <div>
             <label className="block mb-1 font-medium text-gray-700">
               Full Name
@@ -144,7 +141,6 @@ const Signup = () => {
             />
           </div>
 
-          {/* Email */}
           <div>
             <label className="block mb-1 font-medium text-gray-700">
               Email
@@ -160,7 +156,6 @@ const Signup = () => {
             />
           </div>
 
-          {/* Password */}
           <div className="relative">
             <label className="block mb-1 font-medium text-gray-700">
               Password
@@ -191,10 +186,8 @@ const Signup = () => {
           </button>
         </form>
 
-        {/* Divider */}
         <div className="divider">OR</div>
 
-        {/* Google Signup */}
         <button
           onClick={handleGoogleSignup}
           className="btn btn-outline w-full hover:shadow-md"
@@ -202,7 +195,7 @@ const Signup = () => {
           Continue with Google
         </button>
 
-        {/* Link to Login */}
+        
         <p className="text-center text-sm mt-4 text-gray-600">
           Already have an account?{" "}
           <Link to="/login" className="text-blue-600 hover:underline">

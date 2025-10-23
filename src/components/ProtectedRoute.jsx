@@ -1,4 +1,3 @@
-// src/components/ProtectedRoute.jsx
 import React, { useEffect, useState } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
@@ -18,7 +17,7 @@ const ProtectedRoute = ({ children }) => {
     return () => unsubscribe();
   }, []);
 
-  // Elegant loading screen while checking auth
+  
   if (checking) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[70vh] text-gray-700">
@@ -32,12 +31,10 @@ const ProtectedRoute = ({ children }) => {
     );
   }
 
-  // If user is not authenticated → redirect to login
   if (!user) {
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
 
-  // If authenticated → render protected page
   return children;
 };
 

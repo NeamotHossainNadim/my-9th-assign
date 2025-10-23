@@ -81,7 +81,7 @@ const Navbar = () => {
                 className="flex items-center gap-2 bg-gray-50 hover:bg-gray-100 px-3 py-2 rounded-full transition border border-transparent hover:border-gray-200"
               >
                 <img
-                  src={user.photoURL || "https://via.placeholder.com/40"}
+                  src={user.photoURL}
                   alt="User Avatar"
                   className="w-8 h-8 rounded-full object-cover"
                 />
@@ -187,7 +187,7 @@ const Navbar = () => {
                       className="flex items-center gap-2 py-2"
                     >
                       <img
-                        src={user.photoURL || "https://via.placeholder.com/40"}
+                        src={user.photoURL}
                         alt="User Avatar"
                         className="w-8 h-8 rounded-full object-cover"
                       />

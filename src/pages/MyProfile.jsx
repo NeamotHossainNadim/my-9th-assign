@@ -59,7 +59,7 @@ const MyProfile = () => {
           
           <div className="relative">
             <img
-              src={photoURL || "https://via.placeholder.com/120?text=User"}
+              src={photoURL}
               alt="Profile"
               className="w-32 h-32 rounded-full object-cover border-4 border-blue-500 shadow-md"
             />

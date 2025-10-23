@@ -1,4 +1,3 @@
-// src/pages/ForgetPassword.jsx
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { sendPasswordResetEmail } from "firebase/auth";
@@ -11,7 +10,7 @@ const ForgetPassword = () => {
   const location = useLocation();
   const [email, setEmail] = useState("");
 
-  // Prefill email if passed from login page
+  
   useEffect(() => {
     if (location.state?.email) {
       setEmail(location.state.email);
@@ -27,7 +26,7 @@ const ForgetPassword = () => {
 
     try {
       await sendPasswordResetEmail(auth, email);
-      toast.success("✅ Password reset email sent! Redirecting to Gmail...");
+      toast.success("Password reset email sent! Redirecting to Gmail...");
       setTimeout(() => {
         window.location.href = "https://mail.google.com/";
       }, 2000);
@@ -44,7 +43,7 @@ const ForgetPassword = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="bg-white w-full max-w-md rounded-2xl shadow-xl p-8"
       >
-        {/* Icon + Title */}
+        
         <div className="flex flex-col items-center mb-6">
           <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 rounded-full text-white mb-3">
             <FaEnvelopeOpenText size={28} />
@@ -58,7 +57,7 @@ const ForgetPassword = () => {
           </p>
         </div>
 
-        {/* Form */}
+        
         <form onSubmit={handleResetPassword} className="space-y-5">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">

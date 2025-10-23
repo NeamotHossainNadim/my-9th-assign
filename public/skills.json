@@ -6,9 +6,8 @@
     "category": "Technology",
     "price": 199,
     "rating": 4.8,
-    "image": "https://i.ibb.co/0QdBGRb/webdev.jpg",
-    "providerName": "John Smith",
-    "providerEmail": "john.smith@example.com"
+    "providerName": "Abdul Hamid",
+    "providerEmail": "abdul6453@gmail.com"
   },
   {
     "skillId": 2,
@@ -17,9 +16,8 @@
     "category": "Marketing",
     "price": 149,
     "rating": 4.6,
-    "image": "https://i.ibb.co/8P5ch8Y/marketing.jpg",
-    "providerName": "Emily Brown",
-    "providerEmail": "emily.brown@example.com"
+    "providerName": "Abid Ahmed Subahan",
+    "providerEmail": "abidahmed335@gmail.com"
   },
   {
     "skillId": 3,
@@ -28,9 +26,8 @@
     "category": "Design",
     "price": 129,
     "rating": 4.7,
-    "image": "https://i.ibb.co/jzjr2yT/graphicdesign.jpg",
-    "providerName": "Michael Green",
-    "providerEmail": "michael.green@example.com"
+    "providerName": "Ador Ahtam",
+    "providerEmail": "adorahtam65@gmail.com"
   },
   {
     "skillId": 4,
@@ -39,9 +36,8 @@
     "category": "Data Science",
     "price": 179,
     "rating": 4.9,
-    "image": "https://i.ibb.co/JjGbfZh/dataanalysis.jpg",
-    "providerName": "Sophia Lee",
-    "providerEmail": "sophia.lee@example.com"
+    "providerName": "Istiaq Hossain",
+    "providerEmail": "khanistiaq99@gmail.com"
   },
   {
     "skillId": 5,
@@ -50,8 +46,7 @@
     "category": "Art & Photography",
     "price": 99,
     "rating": 4.5,
-    "image": "https://i.ibb.co/Y8mQkQ2/photography.jpg",
-    "providerName": "David Clark",
-    "providerEmail": "david.clark@example.com"
+    "providerName": "Tawhidul Islam",
+    "providerEmail": "tawhid4545@gmail.com"
   }
 ]

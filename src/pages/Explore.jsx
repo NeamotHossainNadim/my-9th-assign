@@ -61,7 +61,7 @@ const Explore = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-100">
       <div className="container mx-auto px-4 py-12">
-        {/* Header */}
+        
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -75,7 +75,6 @@ const Explore = () => {
           </p>
         </motion.div>
 
-        {/* Search + Sort */}
         <motion.div
           data-aos="fade-up"
           className="flex flex-col md:flex-row justify-between items-center gap-4 mb-10"
@@ -123,7 +122,6 @@ const Explore = () => {
           </div>
         </motion.div>
 
-        {/* Category Pills */}
         <motion.div
           data-aos="fade-up"
           className="flex flex-wrap justify-center gap-3 mb-10"
@@ -145,7 +143,6 @@ const Explore = () => {
           ))}
         </motion.div>
 
-        {/* Grid */}
         {filteredSkills.length > 0 ? (
           <motion.div
             data-aos="fade-up"

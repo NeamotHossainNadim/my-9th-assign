@@ -1,10 +1,13 @@
-// src/pages/SkillDetails.jsx
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+
+import { FaUser, FaStar, FaChair } from "react-icons/fa";
+import { MdAttachMoney } from "react-icons/md";
 
 const SkillDetails = () => {
   const { id } = useParams();
@@ -30,7 +33,7 @@ const SkillDetails = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    toast.success("🎉 Session booked successfully!");
+    toast.success("Session booked successfully!");
     setForm({ name: "", email: "" });
   };
 
@@ -55,7 +58,7 @@ const SkillDetails = () => {
         animate={{ opacity: 1, y: 0 }}
         className="container mx-auto grid md:grid-cols-2 gap-10 items-start"
       >
-        {/* Left Column – Skill Info */}
+        
         <div
           data-aos="fade-right"
           className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100"
@@ -77,23 +80,24 @@ const SkillDetails = () => {
             {skill.description}
           </p>
 
-          <div className="flex flex-wrap gap-3">
-            <span className="px-4 py-2 bg-blue-50 text-blue-700 rounded-full font-medium">
-              👤 {skill.providerName}
+          <div className="flex flex-wrap gap-3 text-sm">
+            <span className="flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-full font-medium">
+              <FaUser className="text-blue-600" /> {skill.providerName}
             </span>
-            <span className="px-4 py-2 bg-green-50 text-green-700 rounded-full font-medium">
-              💰 ${skill.price}
+            <span className="flex items-center gap-2 px-4 py-2 bg-green-50 text-green-700 rounded-full font-medium">
+              <MdAttachMoney className="text-green-600" /> ${skill.price}
             </span>
-            <span className="px-4 py-2 bg-yellow-50 text-yellow-700 rounded-full font-medium">
-              ⭐ {skill.rating}
+            <span className="flex items-center gap-2 px-4 py-2 bg-yellow-50 text-yellow-700 rounded-full font-medium">
+              <FaStar className="text-yellow-500" /> {skill.rating}
             </span>
-            <span className="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full font-medium">
-              🪑 Slots: {skill.slotsAvailable || "Available"}
+            <span className="flex items-center gap-2 px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full font-medium">
+              <FaChair className="text-indigo-600" />{" "}
+              {skill.slotsAvailable || "Available"}
             </span>
           </div>
         </div>
 
-        {/* Right Column – Booking Form */}
+        
         <motion.div
           data-aos="fade-left"
           className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
@@ -102,8 +106,9 @@ const SkillDetails = () => {
             Book a Session
           </h3>
           <p className="text-gray-500 mb-6 text-sm leading-relaxed">
-            Reserve a personalized session with <b>{skill.providerName}</b>.
-            Enter your details below to confirm your booking.
+            Reserve a personalized session with{" "}
+            <b>{skill.providerName}</b>. Enter your details below to confirm
+            your booking.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-5">
@@ -117,7 +122,7 @@ const SkillDetails = () => {
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 required
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="John Doe"
+                placeholder="Enter your name"
               />
             </div>
 
@@ -131,7 +136,7 @@ const SkillDetails = () => {
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 required
                 className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="you@example.com"
+                placeholder="Enter your email"
               />
             </div>
 
@@ -144,7 +149,7 @@ const SkillDetails = () => {
           </form>
 
           <div className="mt-6 text-sm text-gray-500 text-center">
-            💡 You’ll receive an email confirmation with your session details.
+            You’ll receive an email confirmation with your session details.
           </div>
         </motion.div>
       </motion.div>
