@@ -1,4 +1,3 @@
-// src/pages/Login.jsx
 import React, { useState } from "react";
 import {
   signInWithEmailAndPassword,
@@ -24,7 +23,7 @@ const Login = () => {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      toast.success("✅ Login successful!");
+      toast.success("Login successful!");
       navigate(from, { replace: true });
     } catch (error) {
       toast.error(error.message);
@@ -35,7 +34,7 @@ const Login = () => {
     const provider = new GoogleAuthProvider();
     try {
       await signInWithPopup(auth, provider);
-      toast.success("🎉 Logged in with Google!");
+      toast.success("Logged in with Google!");
       navigate(from, { replace: true });
     } catch (error) {
       toast.error(error.message);
@@ -51,13 +50,12 @@ const Login = () => {
         className="bg-white/90 backdrop-blur-md shadow-2xl rounded-2xl p-8 w-full max-w-md border border-gray-100"
       >
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-2">
-          Welcome Back 👋
+          Welcome Back
         </h2>
         <p className="text-center text-gray-500 mb-6">
           Log in to continue your SkillSwap journey
         </p>
 
-        {/* Form */}
         <form onSubmit={handleLogin} className="space-y-5">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -73,7 +71,6 @@ const Login = () => {
             />
           </div>
 
-          {/* Password */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Password
@@ -97,7 +94,7 @@ const Login = () => {
             </div>
           </div>
 
-          {/* Forgot password */}
+          
           <div className="text-right">
             <Link
               to="/forget-password"
@@ -116,14 +113,14 @@ const Login = () => {
           </button>
         </form>
 
-        {/* Divider */}
+        
         <div className="flex items-center gap-2 my-6">
           <div className="flex-grow h-px bg-gray-300"></div>
           <span className="text-gray-400 text-sm">OR</span>
           <div className="flex-grow h-px bg-gray-300"></div>
         </div>
 
-        {/* Google Login */}
+        
         <button
           onClick={handleGoogleLogin}
           className="w-full flex items-center justify-center gap-2 border border-gray-300 py-2.5 rounded-md hover:bg-gray-50 transition"
@@ -132,7 +129,7 @@ const Login = () => {
           <span className="text-gray-700 font-medium">Continue with Google</span>
         </button>
 
-        {/* Footer */}
+        
         <p className="text-center text-sm text-gray-500 mt-6">
           Don’t have an account?{" "}
           <Link to="/signup" className="text-blue-600 hover:underline font-medium">
