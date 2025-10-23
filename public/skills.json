@@ -1,0 +1,57 @@
+[
+  {
+    "skillId": 1,
+    "skillName": "Web Development Bootcamp",
+    "description": "Learn full-stack web development using HTML, CSS, JavaScript, React, and Node.js.",
+    "category": "Technology",
+    "price": 199,
+    "rating": 4.8,
+    "image": "https://i.ibb.co/0QdBGRb/webdev.jpg",
+    "providerName": "John Smith",
+    "providerEmail": "john.smith@example.com"
+  },
+  {
+    "skillId": 2,
+    "skillName": "Digital Marketing Mastery",
+    "description": "Comprehensive guide to SEO, content marketing, Google Ads, and social media strategy.",
+    "category": "Marketing",
+    "price": 149,
+    "rating": 4.6,
+    "image": "https://i.ibb.co/8P5ch8Y/marketing.jpg",
+    "providerName": "Emily Brown",
+    "providerEmail": "emily.brown@example.com"
+  },
+  {
+    "skillId": 3,
+    "skillName": "Graphic Design Fundamentals",
+    "description": "Master Adobe Photoshop, Illustrator, and modern design principles for digital media.",
+    "category": "Design",
+    "price": 129,
+    "rating": 4.7,
+    "image": "https://i.ibb.co/jzjr2yT/graphicdesign.jpg",
+    "providerName": "Michael Green",
+    "providerEmail": "michael.green@example.com"
+  },
+  {
+    "skillId": 4,
+    "skillName": "Data Analysis with Python",
+    "description": "Analyze, visualize, and interpret data using Python, Pandas, and Matplotlib.",
+    "category": "Data Science",
+    "price": 179,
+    "rating": 4.9,
+    "image": "https://i.ibb.co/JjGbfZh/dataanalysis.jpg",
+    "providerName": "Sophia Lee",
+    "providerEmail": "sophia.lee@example.com"
+  },
+  {
+    "skillId": 5,
+    "skillName": "Photography Essentials",
+    "description": "Learn camera settings, composition, lighting, and editing techniques for stunning photos.",
+    "category": "Art & Photography",
+    "price": 99,
+    "rating": 4.5,
+    "image": "https://i.ibb.co/Y8mQkQ2/photography.jpg",
+    "providerName": "David Clark",
+    "providerEmail": "david.clark@example.com"
+  }
+]
